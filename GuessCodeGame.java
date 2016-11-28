@@ -19,8 +19,7 @@ public class GuessCodeGame {
 		{
 			public void run()
 			{
-                                //run the GUI method
-				runGUI();
+		    	runGUI(); //run the GUI method
 			}
 		});
     }

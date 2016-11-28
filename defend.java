@@ -10,7 +10,10 @@ public class defend extends game{
     public defend (){
         super();
     }
-    
+
+    //method called when the game is started
+    //pre condition: on creation of an object of class defend
+    //post condition: enable buttons and intialize the game
     public void start(){
         
         //disable the "Defend" ang "Game" buttons and enable combination buttons
@@ -27,7 +30,8 @@ public class defend extends game{
         MainMenu.instruction.setText("Choose your code\nand confirm it!");
         
     }
-    
+    //executed each time a confirm button is pressed
+    //pre condition: confirm button pressed
     public void confirm(){
     
         //executed on the first click of "Confirm" button
@@ -76,6 +80,7 @@ public class defend extends game{
             
             
         } else if (counter == 2){
+
             //save the user inputted evaluation
             evaluation inputEvaluation = new evaluation();
             inputEvaluation.setEvaluation(MainMenu.pA1.getBackground(), 
@@ -83,8 +88,9 @@ public class defend extends game{
                     MainMenu.pD1.getBackground());
             countEvaluation(inputEvaluation);
             
-            
+            //set text of the window
             MainMenu.instruction.setText("Your evaluation was saved.\nComputer made his 2nd guess!\nEvaluate it!");
+            //enable and disable respective buttons
             MainMenu.pA1.setEnabled(false);
             MainMenu.pB1.setEnabled(false);
             MainMenu.pC1.setEnabled(false);

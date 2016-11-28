@@ -28,6 +28,7 @@ public class MainMenu implements ActionListener {
                 pA8, pB8, pC8, pD8, pA9, pB9, pC9, pD9, pA10, pB10, pC10, pD10;
         //
         public static JTextArea instruction;
+
         //button Arrays for storing the code and evaluation buttons
         public static JButton buttonArray[][] = new JButton[4][10];
         public static JButton evaluateButtonArray[][] = new JButton[4][10];
@@ -649,7 +650,9 @@ public class MainMenu implements ActionListener {
     }
     
     
-        
+    //action listener for button presses
+    //Pre condition: button pressed by the user
+    //Post condition: buttonClick finction called        
     @Override
     public void actionPerformed(ActionEvent event) {
         
@@ -845,9 +848,7 @@ public class MainMenu implements ActionListener {
                 newGuessGame.confirm();
             }
             
-            
-            
-        } else if (eventName.equals("rules")){
+        } else if (eventName.equals("rules")){ //opens a new window for class rules
             
             try {
                 rules rulesWindow = new rules();//new object of class rules
